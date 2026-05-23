@@ -14,7 +14,10 @@ cask "bmad-manager" do
 
   app "bmad-manager.app"
 
-  quarantine false
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-r", "-d", "com.apple.quarantine", "#{appdir}/bmad-manager.app"]
+  end
 
   zap trash: [
     "~/Library/Application Support/bmad-manager",
