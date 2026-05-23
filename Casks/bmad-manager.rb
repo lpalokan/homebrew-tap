@@ -1,0 +1,22 @@
+cask "bmad-manager" do
+  version "0.0.0"
+  sha256 :no_check
+
+  url "https://github.com/lpalokan/bmad-manager/releases/download/v#{version}/bmad-manager.dmg"
+  name "bmad-manager"
+  desc "Creates new project folders pre-configured with the BMad method"
+  homepage "https://github.com/lpalokan/bmad-manager"
+
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
+  app "bmad-manager.app"
+
+  quarantine false
+
+  zap trash: [
+    "~/Library/Application Support/bmad-manager",
+  ]
+end
