@@ -1,6 +1,6 @@
 cask "bmad-manager" do
-  version "0.1.1"
-  sha256 "9a1377413d6b6f96072b93e8b03bf09e1b883c77ffa9029155b9a9477948aa2e"
+  version "0.1.2"
+  sha256 "b23b7dccbaea0c6b8d0679eb5aad0f3d65fa74cbbe64eac677ef513fa3aac576"
 
   url "https://github.com/lpalokan/bmad-manager/releases/download/v#{version}/bmad-manager.dmg"
   name "bmad-manager"
